@@ -23,7 +23,9 @@ app.use ('/api/vi/search', require('./Routes/search'))
 app.use ('/api/vi/category', require('./Routes/category'))
 app.use ('/api/vi/favorites', require('./Routes/favorites'))
 app.use('/api/v1/paypal', require('./Routes/paypal'));
-
+app.get('/',(req,res)=>{
+    res.json('hello')
+})
 app.listen (port, (err)=> {
     if (err) {
         return console.log(err) ;
